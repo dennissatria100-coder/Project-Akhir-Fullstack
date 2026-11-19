@@ -151,10 +151,7 @@ Bayar DP:
 ```json
 { "statusCode": 409, "message": "Jadwal sudah dipesan", "error": "Conflict", "timestamp": "2026-11-20T03:00:00.000Z" }
 ```
-
-## Skenario Pengujian Swagger (untuk screenshot)
-Simpan screenshot ke `docs/swagger-screenshots/`.
-
+### Skenario pengujiann swagger
 | No | Skenario | Hasil |
 |---|---|---|
 | 1 | Register dan login | 201 / 200 |
@@ -177,7 +174,11 @@ Tips: untuk skenario 14, buat booking di hari ini dengan jam mulai < 3 jam lagi 
 Untuk skenario 12, nonaktifkan lapangan dengan `PATCH /courts/:id` body `{ "isActive": false }`.
 
 ## Screenshot Swagger
-(Tempel screenshot dari `docs/swagger-screenshots/` di sini)
+(<Screenshot 2026-11-19 150113.png>)
+(<Screenshot 2026-11-19 150907.png>)
+(<Screenshot 2026-11-19 151756.png>)
+(<Screenshot 2026-11-19 150927.png>)
+
 
 ## Struktur Folder
 ```
@@ -199,8 +200,4 @@ docs/
 ├── erd.dbml
 └── swagger-screenshots/
 ```
-
-## Identitas Pembuat
-- Nama  : _isi nama kamu_
-- NIM   : _isi NIM_
-- Kelas : _isi kelas_
+ 
