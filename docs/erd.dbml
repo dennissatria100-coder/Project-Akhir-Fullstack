@@ -1,0 +1,78 @@
+// Tempel ke https://dbdiagram.io untuk mengedit/mengekspor ulang ERD
+
+Table users {
+  id int [pk, increment]
+  name varchar(100)
+  email varchar(150) [unique]
+  password varchar [note: 'hash bcrypt']
+  phone varchar(20)
+  role user_role [note: 'admin | customer']
+  created_at timestamptz
+  updated_at timestamptz
+}
+
+Table courts {
+  id int [pk, increment]
+  name varchar(100)
+  floor_type floor_type [note: 'vinyl | interlock | sintetis | parquet']
+  location_type location_type [note: 'indoor | outdoor']
+  capacity int
+  description text
+  image_url varchar
+  is_active boolean
+  created_at timestamptz
+  updated_at timestamptz
+}
+
+Table court_prices {
+  id int [pk, increment]
+  court_id int [ref: > courts.id]
+  day_type day_type [note: 'weekday | weekend']
+  start_time time
+  end_time time
+  price_per_hour int
+}
+
+Table bookings {
+  id int [pk, increment]
+  user_id int [ref: > users.id]
+  court_id int [ref: > courts.id]
+  booking_date date
+  start_time time
+  end_time time
+  team_name varchar(100)
+  player_count int
+  total_price int
+  status booking_status [note: 'pending | confirmed | cancelled | completed | no_show']
+  notes text
+  created_at timestamptz
+  updated_at timestamptz
+}
+
+Table equipment {
+  id int [pk, increment]
+  name varchar(100)
+  rental_price int
+  stock int
+  is_active boolean
+}
+
+Table booking_equipments {
+  id int [pk, increment]
+  booking_id int [ref: > bookings.id]
+  equipment_id int [ref: > equipment.id]
+  quantity int
+  subtotal int
+}
+
+Table payments {
+  id int [pk, increment]
+  booking_id int [ref: > bookings.id]
+  amount int
+  payment_type payment_type [note: 'dp | full']
+  method payment_method [note: 'transfer | cash | e-wallet']
+  status payment_status [note: 'unpaid | partial | paid | refunded']
+  proof_url varchar
+  paid_at timestamptz
+  created_at timestamptz
+}
