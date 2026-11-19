@@ -174,10 +174,7 @@ Tips: untuk skenario 14, buat booking di hari ini dengan jam mulai < 3 jam lagi 
 Untuk skenario 12, nonaktifkan lapangan dengan `PATCH /courts/:id` body `{ "isActive": false }`.
 
 ## Screenshot Swagger
-(<Screenshot 2026-11-19 150113.png>)
-(<Screenshot 2026-11-19 150907.png>)
-(<Screenshot 2026-11-19 151756.png>)
-(<Screenshot 2026-11-19 150927.png>)
+<img width="1920" height="1020" alt="Screenshot 2026-11-19 150025" src="https://github.com/user-attachments/assets/a2a3dd21-e12d-49ec-a002-9e5628befd9a" />
 
 
 ## Struktur Folder
