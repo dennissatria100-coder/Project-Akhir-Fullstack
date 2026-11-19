@@ -175,6 +175,9 @@ Untuk skenario 12, nonaktifkan lapangan dengan `PATCH /courts/:id` body `{ "isAc
 
 ## Screenshot Swagger
 <img width="1920" height="1020" alt="Screenshot 2026-11-19 150025" src="https://github.com/user-attachments/assets/a2a3dd21-e12d-49ec-a002-9e5628befd9a" />
+<img width="1920" height="1020" alt="Screenshot 2026-11-19 150907" src="https://github.com/user-attachments/assets/ddd438b0-8e37-4fe4-9e4b-a3a2904207b5" />
+<img width="1920" height="1020" alt="Screenshot 2026-11-19 150917" src="https://github.com/user-attachments/assets/05d02b3b-3628-4f02-a5e9-9184e1f1c415" />
+<img width="1920" height="1020" alt="Screenshot 2026-11-19 150927" src="https://github.com/user-attachments/assets/f9c6f378-88fc-4489-b74c-1bfc46fccc76" />
 
 
 ## Struktur Folder
